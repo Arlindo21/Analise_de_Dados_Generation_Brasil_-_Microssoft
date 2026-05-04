@@ -41,8 +41,8 @@ print(f'A média das alturas  é : {np.mean(alturas)}')
 # nadda muda 
 
 dados_equipamentos ={
-    'Consumo ':[10,20,30,40,50,60,70,80],
-    'tempratura':[25,32,45,48,60,72,85,0]
+    'consumo':[10,20,30,40,50,60,70,80],
+    'temperatura':[25,32,45,48,60,72,85,0]
 
 }
 # Transformçãos dos dados para a leitura em Pandas 
@@ -59,4 +59,10 @@ print(f'A covariencia foi :{cov_matrix.iloc[0,1]}')
 
 print(df_dados.corr())
 
+# gerando grafico 
+sns.scatterplot(x='consumo', y='temperatura', data=df_dados)
+plt.title('Grafico de correlção')
+plt.xlabel('Consumo de Energia', fontsize=12)
+plt.ylabel('Temperatura', fontsize=12)
 
+plt.show()
