@@ -36,3 +36,18 @@ if noticias1 is not None:
     print(noticias1.head(10))
 else:
     print('Não consegui ler as noticias')
+    from re import X
+# Grafico com Valor medio de gasolina 
+import matplotlib.pyplot as plt
+# Eixos 
+x_mes = ['Janeiro','Fevereiro','Março','Abril','Maio']
+y_preco = [5.76,6.50,6.43,6.41,6.20]
+
+#Gerando grafico biblioteca
+plt.figure(figsize=(8,4))
+plt.plot(x_mes, y_preco, marker='o', linestyle='-',color='blue')
+plt.title('Media do Preço da Gasolina')
+plt.xlabel('Mês', fontsize=12)
+plt.ylabel('Valors', fontsize=12)
+plt.grid(True)
+plt.show()
