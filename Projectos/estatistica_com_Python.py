@@ -62,6 +62,14 @@ def dispersao_variabilidade():
     sns.boxplot(x=df_shoes['Revenue_USD'])
     plt.title("Distribuição da Receita (Boxplot)")
     plt.show()
+  #Histograma
+  def histograma():
+        plt.figure(figsize=(8, 5))
+        sns.histplot(df_shoes['Price_USD'], kde=True, color='red', bins=30)
+        plt.title("Histograma da Receita")
+        plt.xlabel("Receita")
+        plt.ylabel("Frequência")
 
 medidas_tendencia()
-dispersao_variabilidade
+dispersao_variabilidade()
+histograma()
