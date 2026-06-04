@@ -79,7 +79,7 @@ select * from vw_historico_Pedidos;
 
 select c.nome_cliente,
 count(c.id_cliente) as "Quantidade de Compras",
-avg(p.quantidade_pedidos*p.valor_unitario_pedidos)as "Tiket Medio",
+round(avg(p.quantidade_pedidos*p.valor_unitario_pedidos), 2) as "Tiket Medio",
 sum(p.quantidade_pedidos*p.valor_unitario_pedidos)as "Total Gasto"
 from cliente c 
 join pedidos p on p.id_cliente = c.id_cliente
